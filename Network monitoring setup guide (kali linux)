@@ -1,3 +1,44 @@
 This is a link to a guide I created on a separate forum.
 
-https://github.com/aircrack-ng/aircrack-ng/discussions/2381
+full discussion: https://github.com/aircrack-ng/aircrack-ng/discussions/2381
+
+Transcript:
+
+li Linux: Tech Key AC1200 USB Wifi Adapter; Realtek RTL88X2BU Driver Installation Successful
+#2381
+@Iterativehail27
+on Jan 18 · 9 comments · 3 replies
+Discussion options
+
+Iterativehail27
+on Jan 18
+Hello everyone, I was successful in installing the RTL88x2BU driver for this adapter:
+
+Techkey ac1200 wifi USB 3.0 adapter
+
+On Kali linux 2022.4-live-amd64; as a live usb.
+
+
+Additional Information about my Install of Kali Linux:
+> `Kali*kali: uname -a`
+
+-> Linux kali 6.0.0-kali3-amd64 1 SMP PREEMPT_DYNAMIC Debian 6.0.7-1kali1 (2022-11-07) x86_64 GNU/Linux
+
+To Install RTL88x2BU Driver Use These Commands as Follows:
+> `Kali*kali: sudo apt update && sudo apt upgrade`
+> `Kali*kali: sudo apt install -y linux-headers-$(uname -r) build-essential bc dkms git libelf-dev`
+> `Kali*kali: mkdir -p ~/src`
+> `Kali*kali: cd ~/src`
+> `Kali*kali: git clone https://github.com/morrownr/88x2bu-20210702.git`
+> `Kali*kali: ls`
+> `Kali*kali: cd /88x2bu-20210702`
+> `Kali*kali: sudo ./install-driver.sh`
+After installing I confirmed it supports monitor mode and injection.
+
+END NOTES:
+I hope you all found this useful, if this helps you in some way please share your experience here or somewhere else if you have the time to follow-up with your successful installation of the RTL88x2BU driver on whatever NIC you may use.
+
+
+Huge thank you to https://github.com/morrownr for providing the repository for the RTL88x2BU driver used in this install guide.
+Another thank you to Rokland Super Tech https://www.youtube.com/watch?v=Lx0j6KArKpA for his RTL8812AU install guide.
+One more thank you to RTP Privacy Tech Tips https://www.youtube.com/watch?v=nehj6MJ4-hg&t=369s for her checklist/troubleshooting guide.
